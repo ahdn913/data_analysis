@@ -20,24 +20,6 @@ Key skills: SQL, Power BI, DAX, Power Query, Python, star schema modeling, busin
 
 Folder: `data_analysis_finance/`
 
-## Repository Structure
-
-data_analysis/
-├── data_analysis_epidem/
-│   ├── data/
-│   ├── scripts/
-│   ├── sql/
-│   ├── powerbi/
-│   └── README.md
-├── data_analysis_finance/
-│   ├── data/
-│   ├── scripts/
-│   ├── sql/
-│   ├── powerbi/
-│   ├── excel/
-│   └── README.md
-└── README.md
-
 ## Common Stack Across Projects
 
 - SQL (PostgreSQL) for data modeling and advanced queries
