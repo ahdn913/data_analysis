@@ -6,23 +6,6 @@ An end-to-end data analysis project using SQL, Power BI, DAX, Power Query, Pytho
 
 This project analyzes sales data from a retail chain to answer business questions such as: which categories are most profitable, which region has the highest profit margin, how discounts affect profitability, and how sales evolve over time. It demonstrates a complete analytics workflow: data ingestion with Python, dimensional modeling in PostgreSQL, advanced SQL queries with CTEs and window functions, an interactive Power BI dashboard with DAX measures, and complementary analysis in Excel.
 
-## Project Structure
-
-superstore-sales-analysis/
-├── data/
-│   └── raw/
-│       └── Sample - Superstore.csv
-├── scripts/
-│   └── load_data.py
-├── sql/
-│   ├── 01_create_tables.sql
-│   └── 02_analysis_queries.sql
-├── powerbi/
-│   └── superstore_dashboard.pbix
-├── excel/
-│   └── superstore_analysis.xlsx
-└── README.md
-
 ## Data Source
 
 - Superstore Sales Dataset (Kaggle)
