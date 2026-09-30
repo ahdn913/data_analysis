@@ -8,22 +8,6 @@ This project analyzes the evolution of COVID-19 worldwide using public data from
 
 The project answers questions such as: which countries had the highest number of cases, how did the 7-day moving average evolve in Brazil, which WHO region concentrated the most cases, and what was the monthly growth rate over time.
 
-Project Structure
-
-data_analysis/
-├── data_analysis_epidem/
-│ ├── data/
-│ │ └── raw/
-│ │ └── WHO-COVID-19-global-data.csv
-│ ├── scripts/
-│ │ └── load_data.py
-│ ├── sql/
-│ │ ├── 01_create_tables.sql
-│ │ └── 02_analysis_queries.sql
-│ └── powerbi/
-│ └── data_analysis_epidem.pbix
-└── README.md
-
 Data Source
 
     WHO COVID-19 Global Data: https://covid19.who.int/data
