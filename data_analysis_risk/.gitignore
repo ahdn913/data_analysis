@@ -1,0 +1,34 @@
+# Virtual environments
+airflow_venv/
+data_venv/
+dbt_venv/
+.venv/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Data (large files, not for versioning)
+data/raw/*.csv
+data/processed/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# dbt
+dbt/risk_dbt/target/
+dbt/risk_dbt/dbt_packages/
+dbt/risk_dbt/logs/
+dbt/risk_dbt/.user.yml
+
+# Airflow
+airflow/logs/
+airflow/*.db
+airflow/airflow.cfg
+
+# OS
+.DS_Store
+*.swp

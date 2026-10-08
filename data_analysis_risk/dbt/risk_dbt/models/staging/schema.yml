@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: stg_credit
+    description: "Staging model for raw credit data"
+    columns:
+      - name: target_delinquency
+        description: "1 if the customer defaulted, 0 otherwise"
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [0, 1]
+      - name: age
+        tests:
+          - not_null
