@@ -75,6 +75,8 @@ jobs:
           EOF
 
       - name: Load raw data into PostgreSQL
+        env:
+          DATABASE_URL: postgresql://postgres:postgres@127.0.0.1:5432/credit_risk
         run: |
           pip install pandas sqlalchemy psycopg2-binary
           cd data_analysis_risk
