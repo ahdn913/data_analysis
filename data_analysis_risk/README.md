@@ -34,35 +34,6 @@ Flow:
 - **Python:** ETL, cleaning, and report automation
 - **GitHub Actions:** CI/CD for testing and validation (planned)
 
-## Repository Structure
-
-data_analysis_risk/
-|-- airflow/
-|       |-- dags/
-|       |-- credit_pipeline_dag.py
-|-- data/
-|       |-- raw/
-|       |-- cs-training.csv (gitignored)
-|--dbt/
-|       |-- risk_dbt/
-|       |-- dbt_project.yml
-|       |-- models/
-|       |-- staging/
-|               |-- sources.yml
-|               |-- schema.yml
-|               |-- stg_credit.sql
-|       |-- intermediate/
-|               |-- int_customer_profile.sql
-|               |-- int_delinquency.sql
-|       |-- marts/
-|               |-- dim_customer.sql
-|               |-- fct_credit_risk.sql
-|               |-- mart_risk_by_segment.sql
-|       |-- scripts/
-|               |-- load_data.py
-|-- .gitignore
-|-- README.md
-
 ## Data Source
 
 - **Dataset:** Give Me Some Credit (Kaggle)
