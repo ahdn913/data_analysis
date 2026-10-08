@@ -1,5 +1,7 @@
 # Credit Risk Analytics
 
+![dbt CI](https://github.com/ahdn913/data_analysis/actions/workflows/dbt_ci.yml/badge.svg)
+
 An end-to-end data pipeline analyzing credit default risk using a modern data stack: PostgreSQL, dbt, Apache Airflow, Python, and (in progress) Databricks and Power BI.
 
 ## Overview
@@ -137,6 +139,23 @@ Access `http://localhost:8080` and trigger the `credit_pipeline` DAG.
 | `dbt_test` | dbt | Runs data quality tests |
 | `generate_report` | Bash (placeholder) | Prints a timestamp |
 
+## Databricks (PySpark)
+
+The transformation logic implemented in dbt was reproduced in PySpark on Databricks. The goal was to validate that the same business rules (income bands, age bands, delinquency rate) produce identical results when implemented with different tools.
+
+**Pipeline:**
+
+1. Upload the raw CSV to a Unity Catalog volume.
+2. Read the file with `spark.read.csv`.
+3. Rename columns to match the dbt model.
+4. Create income bands and age bands using `when(...).otherwise(...)`.
+5. Aggregate delinquency rate by segment using `groupBy` and `agg`.
+6. Compare with the dbt mart (`mart_risk_by_segment`).
+
+**Result:** both pipelines produced identical delinquency rates, confirming consistency.
+
+![Databricks output](./databricks/databricks_output.png)
+
 ## KPIs
 
 - **Delinquency rate:** defaulted customers / total customers
@@ -151,9 +170,9 @@ Access `http://localhost:8080` and trigger the `credit_pipeline` DAG.
 - [x] Phase 1: Ingestion and cleaning (Python + PostgreSQL)
 - [x] Phase 2: Transformation (dbt)
 - [x] Phase 4: Orchestration (Airflow)
-- [ ] Phase 3: Processing with Databricks (PySpark)
+- [x] Phase 3: Processing with Databricks (PySpark)
 - [ ] Phase 5: Visualization (Power BI)
-- [ ] Phase 6: CI/CD (GitHub Actions)
+- [x] Phase 6: CI/CD (GitHub Actions)
 
 ## Author
 
